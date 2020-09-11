@@ -65,6 +65,8 @@ In this simple example, we merely copied a websocket broadcast example from else
 
 3. Chris imports public key of Alice (PBKA) and encrypts a secret phrase ("chris_love_cookie"), and sends the encrypted message to Alice.
 
+中文： Chris 输入 Alice 的公钥， 加密一密令 ("chris_love_cookie" 克里斯爱曲奇饼)， 把密文发给 Alice。
+
 ```js
 F("jd: pbk ix: imkey: .")
 F("chris_loves_cookies ecr: wss:")
@@ -86,6 +88,8 @@ F("chris_loves_cookies ecr: wss:")
 
 4. Alice decrypts the message using her own private key (PVKA).
 
+中文： Alice 用自己的私钥解密密文。
+
 ```js
 F("dcr:")
 ```
@@ -94,6 +98,8 @@ F("dcr:")
 
 
 5. Alice imports public key of Chris (PBKC) to encrypt the same message and sends it back to Chris.
+
+中文： Alice 输入 Chris 的公钥， 把以解密的密文再加密 ("chris_love_cookie" 克里斯爱曲奇饼)， 再把密文发给 Chris。
 
 ```js
 F("3 pick: jd: pbk ix: imkey: .")
@@ -105,6 +111,8 @@ F("3 pick: jd: pbk ix: imkey: .")
 
 
 6. Chris reimports his own public and private keys saved on the stack earlier.
+
+中文： Chris 输入刚才储存在堆栈上的公钥和私钥。
 
 ```js
 F("3 pick: pbk ix: imkey: pvk ix: imkey: .")
@@ -119,6 +127,8 @@ F("3 pick: pbk ix: imkey: pvk ix: imkey: .")
 
 
 7. Chris decrypts the message with his own private key (PVKC). The result is shown by examining the stack object (array) `S`, where the top of stack (TOS) (last element in the array) is the decrypted secret phrase `chris_loves_cookies`.
+
+中文： Chris 把密文解密。 堆栈变量 `S` 显示原来发出去的密令 `chris_loves_cookies`。
 
 ```js
 F("dcr:")
