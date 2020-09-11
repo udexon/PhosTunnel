@@ -26,6 +26,8 @@ Most of the input and output will be performed in the browser consoles, shown on
 
 2. Alice and Chris execute a user initialisation script in the browser console, respectively:
 
+中文： Alice (爱丽丝) 与 Chirs (克里斯) 执行了用户初始化脚本：
+
 ```js
 Alice: F("Alice iu:")
 ```
@@ -41,13 +43,17 @@ https://github.com/udexon/XIDT/blob/master/png/02_S.js
 
 In the file above, we can see that there are 3 items on the stack in Alice's browser console:
 
-`0`: Chris' JSON string, containing Chris' public key (PBKC).
+中文： 在上述的文件里， Alice 的堆栈 (stack) 上有以下的数据：
 
-`1`: Alice's public and private key pairs (stored as an JavaScript object).
+`0`: Chris' JSON string （字串）, containing （含有） Chris' public key （公钥）(PBKC). 
 
-`2`: Alice's JSON string, containing Alice's public key (PBKA).
+`1`: Alice's public （公钥） and private key （私钥） pairs (stored （储存为） as an JavaScript object ).
+
+`2`: Alice's JSON string （字串）, containing Alice's public key （公钥） (PBKA).
 
 Similar items exist in the stack in Chris' browser console.
+
+中文： 类似的数据在 Chris 的堆栈 (stack) 里也有。
 
 <img src="https://github.com/udexon/XIDT/blob/master/png/02_init_user.png" width=600>
 
